@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6ls6r8wsdi6"]
+
+[ext_resource type="PackedScene" uid="uid://dyf0prk6b7vx" path="res://ship.tscn" id="1_k5bjj"]
+[ext_resource type="Script" path="res://game.gd" id="1_tygrf"]
+[ext_resource type="PackedScene" uid="uid://c05467axa5ooo" path="res://asteroid.tscn" id="2_tkjt8"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_tygrf")
+
+[node name="ship" parent="." instance=ExtResource("1_k5bjj")]
+position = Vector2(374, 239)
+
+[node name="asteroid" parent="." instance=ExtResource("2_tkjt8")]
+position = Vector2(779, 152)

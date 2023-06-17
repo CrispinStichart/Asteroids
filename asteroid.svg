@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg2936"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="asteroid.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2938"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.2938725"
+     inkscape:cx="626.80056"
+     inkscape:cy="554.15044"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1072"
+     inkscape:window-y="323"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3057" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2933" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;stroke-width:0.264999"
+       d="m 103.1875,76.729166 -37.041668,13.229166 -7.937499,10.583338 5.291666,2.64583 2.645833,21.16667 18.520834,10.58333 18.520834,15.875 13.22917,-23.8125 5.29166,-15.875 21.16667,-13.229168 5.29166,-21.166666 -13.22916,-7.9375 -13.22917,5.291666 -15.875,-10.583333 z"
+       id="path3115" />
+    <path
+       style="fill:#000000;stroke-width:2.665;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100.54167,177.27083 -23.812504,2.64583 -10.583334,13.22917 v 7.9375 l -5.291666,15.875 13.229166,5.29167 13.229167,18.52083 18.520831,-15.875 18.52084,15.875 15.87499,-31.75 -10.58333,-10.58333 7.9375,-13.22917 -13.22916,-7.9375 -15.875,2.64583 z"
+       id="path3117"
+       inkscape:export-filename="asteroid_big.png"
+       inkscape:export-xdpi="97.025566"
+       inkscape:export-ydpi="97.025566" />
+  </g>
+</svg>

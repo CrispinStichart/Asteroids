@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb8ue3yj6vbgs"]
+
+[ext_resource type="Script" path="res://test_asteroid.gd" id="1_a231q"]
+
+[node name="test_asteroid" type="Node2D"]
+script = ExtResource("1_a231q")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+offset_right = 1073.0
+offset_bottom = 223.0
+
+[node name="Label4" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Offset Percentage
+"
+
+[node name="variation" type="HSlider" parent="VBox"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="Label" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Segments"
+
+[node name="segments" type="HSlider" parent="VBox"]
+layout_mode = 2
+value = 8.0
+
+[node name="Label2" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Radius"
+
+[node name="radius" type="HSlider" parent="VBox"]
+layout_mode = 2
+value = 100.0
+
+[node name="spawn" type="Marker2D" parent="."]
+position = Vector2(415, 367)
+
+[connection signal="value_changed" from="VBox/variation" to="." method="generate_asteroid_from_ui"]
+[connection signal="value_changed" from="VBox/segments" to="." method="generate_asteroid_from_ui"]
+[connection signal="value_changed" from="VBox/radius" to="." method="generate_asteroid_from_ui"]

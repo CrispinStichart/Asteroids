@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyf0prk6b7vx"]
+
+[ext_resource type="Script" path="res://ship.gd" id="1_kupv2"]
+[ext_resource type="Texture2D" uid="uid://rq82pw5cemmu" path="res://ship.png" id="2_igho6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yosla"]
+friction = 0.0
+
+[node name="ship" type="RigidBody2D"]
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_yosla")
+angular_damp = -1.0
+script = ExtResource("1_kupv2")
+
+[node name="sprite" type="Sprite2D" parent="."]
+rotation = 1.57079
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_igho6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0.369152, 0.744095)
+rotation = 1.57079
+scale = Vector2(0.2617, 0.255906)
+polygon = PackedVector2Array(97.94, 122.138, -1.4106, 75.2462, -100.761, 122.138, -1.4106, -127.954)
+
+[node name="bullet_spawner" type="Marker2D" parent="."]
+position = Vector2(31, 0)
