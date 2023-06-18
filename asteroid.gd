@@ -37,6 +37,8 @@ func _draw():
 	# Connect the last to the first to finish the circle.
 	draw_line(points[0], points[len(points)-1], color)
 	draw_char(font, points[len(points)-1], str(len(points)-1), 16, Color.RED)
+	
+	draw_circle(Vector2.ZERO, 5, Color.DEEP_PINK)
 
 
 func set_points(points: Array[Vector2]) -> void:
@@ -82,9 +84,29 @@ func explode():
 		var asteroid_two = Asteroid.from_points(splits[1])
 		var asteroid_three = Asteroid.from_points(splits[2])
 		
+		# When the Asteroid is created, the center is set to its natural position.
+		# We need to move them back to their appropriate places so they're not
+		# overlapping.
 		asteroid_one.global_position = global_position + asteroid_one.offset_from_parent
 		asteroid_two.global_position = global_position + asteroid_two.offset_from_parent
 		asteroid_three.global_position = global_position + asteroid_three.offset_from_parent
+		
+		# Give them a nudge outward from the center of the exploded asteroid.
+		# For some reason, the impulse doesn't seem to be originating in the center.
+		var impulse_one = Vector2.from_angle(global_position.angle_to_point(asteroid_one.global_position)) * 10
+		var impulse_two = Vector2.from_angle(global_position.angle_to_point(asteroid_two.global_position)) * 10
+		var impulse_three = Vector2.from_angle(global_position.angle_to_point(asteroid_three.global_position)) * 10
+#		print("test: ", Vector2())
+		print(global_position)
+		print(impulse_one)
+		print(global_position.angle_to(asteroid_one.global_position))
+		print(impulse_two)
+		print(global_position.angle_to(asteroid_two.global_position))
+		print(impulse_three)
+		print(global_position.angle_to(asteroid_three.global_position))
+		asteroid_one.apply_impulse(impulse_one)
+		asteroid_two.apply_impulse(impulse_two)
+		asteroid_three.apply_impulse(impulse_three)
 		
 		add_sibling(asteroid_one)
 		add_sibling(asteroid_two)

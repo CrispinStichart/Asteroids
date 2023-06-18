@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://c05467axa5ooo"]
 
-[ext_resource type="Script" path="res://asteroid.gd" id="1_seg6f"]
+[ext_resource type="Script" path="res://asteroid.gd" id="1_o88xd"]
 
 [node name="asteroid" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_seg6f")
+script = ExtResource("1_o88xd")
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 visible = false
